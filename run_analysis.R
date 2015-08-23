@@ -152,6 +152,8 @@ train.data.set <- DataSetCreator(features.vector, data.set.label = 'train')
 test.data.set <- DataSetCreator(features.vector, data.set.label = 'test')
 # Merge "Train" and "Test" data sets.
 merged.data.set <- rbind(train.data.set,test.data.set)
+# Requested output
+write.table(merged.data.set, "./output.txt", sep="\t")
 # Extracting parameters names with mean and std values.
 new.features.vector <- EditFeatures(features.vector)
 # Creating data set with only mean and std values.
